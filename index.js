@@ -1,4 +1,4 @@
-//import "https://unpkg.com/navigo"  //Will create the global Navigo object used below
+import "https://unpkg.com/navigo"  //Will create the global Navigo object used below
 import "./navigo_EditedByLars.js"  //Will create the global Navigo, with a few changes, object used below
 //import "./navigo.min.js"  //Will create the global Navigo object used below
 
@@ -30,7 +30,8 @@ window.addEventListener("load", async () => {
  const router = new Navigo("/", { hash: true });
   //Not especially nice, BUT MEANT to simplify things. Make the router global so it can be accessed from all js-files
 
-  window.router = router
+  // @ts-ignore
+  window.router = router;
 
   router
     .hooks({

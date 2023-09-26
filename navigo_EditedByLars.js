@@ -9,7 +9,9 @@
 (function webpackUniversalModuleDefinition(root, factory) {
   if (typeof exports === 'object' && typeof module === 'object')
     module.exports = factory();
+  // @ts-ignore
   else if (typeof define === 'function' && define.amd)
+    // @ts-ignore
     define("Navigo", [], factory);
   else if (typeof exports === 'object')
     exports["Navigo"] = factory();
@@ -122,6 +124,7 @@
 /* harmony import */ var _middlewares_processMatches__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./middlewares/processMatches */ "./src/middlewares/processMatches.ts");
 /* harmony import */ var _middlewares_waitingList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./middlewares/waitingList */ "./src/middlewares/waitingList.ts");
 /* harmony import */ var _lifecycles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lifecycles */ "./src/lifecycles.ts");
+          // @ts-ignore
           function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
@@ -303,6 +306,7 @@
               this.routes = routes = [];
 
               if (isPushStateAvailable) {
+                // @ts-ignore
                 window.removeEventListener("popstate", this.__popstateListener);
               }
 
@@ -310,6 +314,7 @@
             }
 
             function notFound(handler, hooks) {
+              // @ts-ignore
               self._notFoundRoute = createRoute("*", handler, [genericHooks, hooks], "__NOT_FOUND__");
               return this;
             }
@@ -984,6 +989,7 @@
 /* harmony import */ var _lifecycles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lifecycles */ "./src/lifecycles.ts");
 /* harmony import */ var _updateState__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateState */ "./src/middlewares/updateState.ts");
 /* harmony import */ var _checkForLeaveHook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./checkForLeaveHook */ "./src/middlewares/checkForLeaveHook.ts");
+          // @ts-ignore
           function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
@@ -1225,6 +1231,7 @@
             var pattern;
 
             if (isString(route.path)) {
+              // @ts-ignore
               pattern = _constants__WEBPACK_IMPORTED_MODULE_0__.START_BY_SLASH_REGEXP + clean(route.path).replace(_constants__WEBPACK_IMPORTED_MODULE_0__.PARAMETER_REGEXP, function (full, dots, name) {
                 paramNames.push(name);
                 return _constants__WEBPACK_IMPORTED_MODULE_0__.REPLACE_VARIABLE_REGEXP;
@@ -1368,10 +1375,13 @@
 /******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
+// @ts-ignore
 /******/ 	!function () {
 /******/ 		// define getter functions for harmony exports
+// @ts-ignore
 /******/ 		__webpack_require__.d = function (exports, definition) {
 /******/ 			for (var key in definition) {
+// @ts-ignore
 /******/ 				if (__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
             /******/
@@ -1384,14 +1394,18 @@
     }();
 /******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+// @ts-ignore
 /******/ 	!function () {
+// @ts-ignore
 /******/ 		__webpack_require__.o = function (obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
       /******/
     }();
 /******/
 /******/ 	/* webpack/runtime/make namespace object */
+// @ts-ignore
 /******/ 	!function () {
 /******/ 		// define __esModule on exports
+// @ts-ignore
 /******/ 		__webpack_require__.r = function (exports) {
 /******/ 			if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });

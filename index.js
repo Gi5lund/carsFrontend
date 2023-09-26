@@ -13,6 +13,7 @@ import { initLogin } from "./pages/login/login.js"
 import { initSignup } from "./pages/signup/signup.js"
 import { initFindEditCar } from "./pages/findEditCar/findEditCar.js"
 import { initListReservationsAll } from "./pages/showReservations/reservations.js"
+import { Navigo } from "./navigo_EditedByLars.js"
 
 window.addEventListener("load", async () => {
 
@@ -28,6 +29,7 @@ window.addEventListener("load", async () => {
 
  const router = new Navigo("/", { hash: true });
   //Not especially nice, BUT MEANT to simplify things. Make the router global so it can be accessed from all js-files
+
   window.router = router
 
   router
@@ -52,7 +54,7 @@ window.addEventListener("load", async () => {
       },
       "/find-edit-car": (match) => {
         renderHtml(templateFindEditCar, "content")
-        initFindEditCar(match)
+        initFindEditCar()
       },
       "/add-car": (match) => {
         renderHtml(templateAddCar, "content")

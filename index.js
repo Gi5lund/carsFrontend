@@ -1,4 +1,4 @@
-import "https://unpkg.com/navigo"  //Will create the global Navigo object used below
+//import "https://unpkg.com/navigo"  //Will create the global Navigo object used below
 import "./navigo_EditedByLars.js"  //Will create the global Navigo, with a few changes, object used below
 //import "./navigo.min.js"  //Will create the global Navigo object used below
 
@@ -55,7 +55,7 @@ window.addEventListener("load", async () => {
       },
       "/find-edit-car": (match) => {
         renderHtml(templateFindEditCar, "content")
-        initFindEditCar()
+        initFindEditCar(match)
       },
       "/add-car": (match) => {
         renderHtml(templateAddCar, "content")
